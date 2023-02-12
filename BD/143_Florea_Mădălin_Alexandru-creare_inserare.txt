@@ -1,0 +1,309 @@
+-- CREAREA TABELELOR --
+
+CREATE TABLE PREZENTATOR (
+	id integer identity(1,1),
+	nume varchar(50) not null,
+	constraint PK_PREZENTATOR_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE GAMEMODE (
+	id integer identity(1,1),
+	nume varchar(10) not null,
+    stadion varchar(30) not null,
+	constraint PK_GAMEMODE_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE ARENA (
+	id integer identity(1,1),
+	nume varchar(40) not null,
+	nr_locuri integer not null,
+	constraint PK_ARENA_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE MASINA (
+	id integer identity(1,1),
+	nume varchar(35) not null,
+	hitbox varchar(10) not null,
+	constraint PK_MASINA_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE MECI (
+	id integer identity(1,1),
+	data_start datetime not null,
+    	titlu varchar(30) not null,
+	constraint PK_MECI_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE CONTINENT(
+	id integer identity(1,1),
+	nume varchar(20) not null,
+	constraint PK_CONTINENT_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE TURNEU(
+	id integer,
+	nume varchar(50) not null,
+	oras varchar(25) not null,
+	data_start date not null,
+	constraint PK_TURNEU_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE GRUPA(
+	id integer identity(1,1),
+	id_turneu integer not null,
+	nume varchar(20) not null,
+	constraint FK_ID_TURNEU_GRUPA 
+	foreign key(id_turneu) references TURNEU(id),
+	constraint PK_GRUPA_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE ECHIPA(
+	id integer identity(1,1),
+	id_continent integer not null,
+	nume varchar(25) not null,
+	tag varchar(7) not null,
+	constraint FK_ID_CONTINENT_ECHIPA 
+	foreign key (id_continent) references CONTINENT(id),
+	constraint PK_ECHIPA_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE EVIDENTA_GRUPA(
+	id_grupa integer,
+	id_echipa integer,
+	constraint FK_ID_GRUPA_EVIDENTA_GRUPA 
+	foreign key(id_grupa) references GRUPA(id),
+	constraint FK_ID_ECHIPA_EVIDENTA_GRUPA
+	foreign key(id_echipa) references ECHIPA(id),
+	constraint PK_EVIDENTA_GRUPA_ID 
+	primary key clustered(id_grupa, id_echipa)
+);
+
+
+CREATE TABLE EVIDENTA_MECI(
+	id_echipa integer,
+	id_meci integer,
+	constraint FK_ID_ECHIPA_MECI_MAP 
+	foreign key(id_echipa) references ECHIPA(id),
+	constraint FK_ID_MECI_MECI_MAP 
+	foreign key(id_meci) references MECI(id),
+	constraint PK_MECI_MAP_ID 
+	primary key clustered(id_echipa,id_meci)
+);
+
+
+CREATE TABLE JUCATOR(
+	id integer identity(1,1),
+	id_echipa integer not null,
+	id_continent integer not null,
+	nume varchar(30) not null,
+	rank varchar(20) not null,
+	constraint FK_ID_ECHIPA_JUCATOR 
+	foreign key (id_echipa) references ECHIPA(id),
+	constraint FK_ID_CONTINENT
+	foreign key (id_continent) references CONTINENT(id),
+	constraint PK_JUCATOR_ID 
+	primary key clustered(id)
+);
+
+
+CREATE TABLE PRESET(
+	id_jucator integer,
+	id_masina integer,
+	constraint FK_ID_JUCATOR_PRESET
+	foreign key(id_jucator) references JUCATOR(id),
+	constraint FK_ID_MASINA_PRESET
+	foreign key(id_masina) references MASINA(id),
+	constraint PK_PRESET_ID 
+	primary key clustered(id_jucator,id_masina)
+);
+
+
+create table RUNDA(
+	id_meci integer,
+	id_prezentator integer,
+	id_gamemode integer,
+	id_arena integer,
+	constraint FK_ID_MECI_RUNDA 
+	foreign key(id_meci) references MECI(id),
+	constraint FK_ID_PREZENTATOR_RUNDA
+	foreign key(id_prezentator) references PREZENTATOR(id),
+	constraint FK_ID_GAMEMODE_RUNDA
+	foreign key(id_gamemode) references GAMEMODE(id),
+	constraint FK_ID_SCENA_RUNDA
+	foreign key(id_arena) references ARENA(id),
+	constraint PK_MECI_DUNDA
+	primary key clustered(id_meci,id_prezentator,id_gamemode,id_arena)
+);
+
+
+
+
+
+
+
+-- CREAREA UNEI SECVENȚE CE VA FI UTILIZATĂ LA INSERAREA --
+-- ÎNREGISTRĂRILOR ÎN TABELUL TURNEU (EXERCIȚIUL 13) --
+
+CREATE SEQUENCE SEQ_TURNEU
+as integer
+start with 1
+increment by 1
+maxvalue 10000;
+
+
+
+
+
+
+
+-- INSERAREA DATELOR ÎN TABELE --
+
+INSERT INTO PREZENTATOR values ('James Hardy'),('Elon Musk'),('David Andersen'),
+('Sam Raimi'),('Mark Zuckerberg'),('Harry Maguire'),('Zack Spector'),
+('Christian Jones'),('Isaac Newton'),('Norman Osborn')
+
+
+INSERT INTO GAMEMODE values
+('Standard', 'Farmstead'), ('Rumble', 'Champions Field (Day)'),
+('Standard', 'Urban Central'), ('Hoops', 'Dunk House'),
+('Dropshot', 'Core 707'), ('Doubles', 'Utopia Coliseum'),
+('Doubles', 'Deadeye Canyon'),('Rumble', 'Mannfield'),
+('Hoops', 'Dunk House'),('Doubles', 'Neo Tokyo'),
+('Snow Day', 'DFH Stadium (Snowy)'), ('Snow Day', 'Beckwith Park (Snowy)')
+
+
+INSERT INTO ARENA values ('Main Stage', 45000),('Second Stage', 35000),
+('Third Stage', 20000),('Octane Garage', 8500),('Breakout Nitro', 9780)
+
+
+INSERT INTO MASINA values ('Breakout', 'Breakout'), ('Samurai', 'Breakout'),
+('Aftershock', 'Dominus'), ('Gazella GT (Hot Wheels)', 'Dominus'),
+('Mantis', 'Plank'), ('Octane', 'Octane'), ('Fennec', 'Octane'), ('Grog', 'Octane'),
+('Endo', 'Hybrid'), ('Battle Bus', 'Merc'), ('Ford Mustang Shelby GT350R RLE', 'Dominus')
+
+
+INSERT INTO CONTINENT values ('North America'),('Europe'),('Oceania'),
+('South America')
+
+
+INSERT INTO TURNEU values
+(next value for SEQ_TURNEU, 'RLCS World Cup', 'Milano', '2020-02-14'),
+(next value for SEQ_TURNEU,'RLCS ALLSTARS', 'New York', '2020-04-15'),
+(next value for SEQ_TURNEU,'GOLD WHEELS', 'Bucharest', '2020-11-24'),
+(next value for SEQ_TURNEU,'SCORE!', 'Oslo', '2021-01-04'),
+(next value for SEQ_TURNEU,'RLCS SIUI JOURNEY', 'San Francisco', '2021-03-06'),
+(next value for SEQ_TURNEU,'RLCS VIP CARS', 'Paris', '2021-09-05'),
+(next value for SEQ_TURNEU,'SUPERSONIC', 'London', '2022-02-28'),
+(next value for SEQ_TURNEU,'RLCS-SPRING', 'Toronto', '2022-04-04'),
+(next value for SEQ_TURNEU,'RLCS SUMMER','Sydney','2022-07-19')
+
+
+insert into MECI values
+('2022-05-10 16:00:00', 'Debut'), ('2022-05-11 16:00:00', 'Revenge'),
+('2022-05-13 11:00:00', 'Final'), ('2022-05-14 16:00:00', 'Quarter Final'),
+('2021-11-01 16:00:00', 'Fight'), ('2021-8-02 12:00:00', 'Academy'),
+('2021-04-03 08:00:00', 'Final'), ('2022-01-12 18:00:00', 'RunnerUps'),
+('2022-05-12 15:00:00', 'Aerials')
+
+
+INSERT INTO GRUPA values
+(1, 'A'),(1, 'B'),(1, 'C'),(1, 'D'),
+(2, 'A'),(2, 'B'),(2, 'C'),(2, 'D'),
+(3, 'A'),(3, 'B'),(3, 'C'),(3, 'D'),
+(4, 'A'),(4, 'B'),(4, 'C'),(4, 'D'),
+(5, 'A'),(5, 'B'),(5, 'C'),(5, 'D'),
+(6, 'A'),(6, 'B'),(6, 'C'),(6, 'D'),
+(7, 'A'),(7, 'B'),(7, 'C'),(7, 'D'),
+(8, 'A'),(8, 'B'),(8, 'C'),(8, 'D'),
+(9, 'A'),(9, 'B'),(9, 'C'),(9, 'D')
+
+
+INSERT INTO ECHIPA values (1, 'FaZe Clan', '[FZC]'),
+(1, 'NRG', '[NRG]'),(1,'Torrent', '[TORR]'),
+(2, 'Team Singularity', '[SG]'), (2, 'Team Liquid', '[H2O]'),
+(2, 'Endpoint', '[END]'),(2, 'Team Vitality', '[VIT]'),
+(3, 'Ground Zero Gaming', '[ZERO]'),(3, 'Renegades', '[RGD]'),
+(4, 'Furia', '[F]')
+
+
+
+INSERT INTO EVIDENTA_GRUPA values
+(1,1),(1,2),(1,3),(1,4),
+(2,5),(2,6),(2,7),(2,8),
+(3,9),(3,10)
+
+
+insert into EVIDENTA_MECI values
+(1,11),(2,11),(3,2),(4,2),
+(1,3),(3,3),(1,4),(4,4),
+(2,5),(3,5),(5,6),(6,6),
+(5,7),(7,7),(6,8),(7,8),
+(8,9),(5,9),(9,10),(10,10)
+
+
+insert into JUCATOR values 
+(1,1,'Zeus','Silver 1'), (1,1,'Alex','Silver 2'),
+(1,1,'Thor','Silver 3'), (1,1,'Squishi','Bronze 1'),
+(1,1,'iSkate.[]','Grand Champion 2'), (2,1,'SurTeX','Champion 2'),
+(2,1,'Chelu','Champion 3'), (2,1,'Ka0os','Bronze 1'),
+(2,1,'VanguL:','Champion 1'), (2,1,'Guubi','Champion 3'),
+(3,1,'Blade','Silver 2'), (3,1,'MoonKnight','Supersonic Legend'),
+(3,1,'Korg','Champion 1'), (3,1,'Groot','Supersonic Legend'),
+(3,1,'Chris','Champion1'), (4,2,'Impact','Grand Champion 3'),
+(4,2,'Ovuvuevuevue','Silver 4'), (4,2,'Enyetueuevue','Grand Champion 3'),
+(4,2,'Ugbemugbem','Grand Champion 2'), (4,2,'Osas','Champion 1'), 
+(5,2,'TiTan','Supersonic Legend'), (5,2,'PashA','Bronze 2'),
+(5,2,'Bay','Supersonic Legend'), (5,2,'Unified','Champion 2'),
+(5,2,'Kaiwing','Bronze 1'), (6,2,'ThuNdeR','Platinum 3'),
+(6,2,'FlaSh','Silver4'), (6,2,'Avenger','Platinum 2'),
+(6,2,'TitaN','Champion3'), (6,2,'Jojo','Grand Champion 3'),
+(7,2,'Lonely','Bronze1'), (7,2,'Dimitry','Champion2'),
+(7,2,'Aloned','Platinum 3'), (7,2,'Gigel','Platinum 1'),
+(7,2,'Straight','Bronze3'), (8,3,'BioPanther','Champion2'),
+(8,3,'Maximize','Platinum 1'), (8,3,'Messi','Platinum 2'),
+(8,3,'Puma','Champion3'), (8,3,'Corporal','Grand Champion 3'),
+(9,3,'Bullet','Grand Champion 2'), (9,3,'Infernus','Bronze 2'),
+(9,3,'SuperGT','Grand Champion 2'), (9,3,'Phoenix','Grand Champion 3'),
+(9,3,'Crister','Champion1'), (10,4,'Reverse','Champion 2'),
+(10,4,'AirKing','Gold 3'), (10,4,'Froggy','Silver 2'),
+(10,4,'GGez','Gold 2'), (10,4,'Sewy','Champion 1')
+
+
+insert into PRESET values 
+(1,1),(1,3),(1,5),(2,2),(2,5),(2,6),(3,4),(3,6),(3,1),(4,7),(4,3),
+(5,10),(5,5),(6,10),(7,11),(8,4),(8,8),(8,2),
+(9,11),(9,2),(10,7),(11,11),(12,10),(12,2),
+(13,4),(13,7),(14,4),(15,5),(15,7),(16,6),(16,8),
+(17,1),(17,2),(17,8),(18,2),(18,3),(18,4),(19,5),(19,6),(19,7),(20,7),(20,8),
+(21,2),(21,1),(21,3),(22,8),(22,10),(23,10),(23,9),(24,5),(24,6),
+(25,9),(25,8),(25,7),(26,2),(26,3),(27,3),(27,4),(28,5),(28,4),
+(29,6),(29,7),(29,3),(30,6),(30,5),(31,5),(32,1),(31,1),(32,2),(32,9),
+(33,4),(33,3),(33,9),(34,2),(35,1),(35,3),(36,8),(36,7),
+(37,1),(37,2),(38,7),(38,9),(38,10),(39,6),(39,2),(39,3),(40,1),
+(41,2),(41,3),(42,4),(42,1),(42,2),(43,5),(44,6),(43,7),(44,10),
+(45,3),(45,8),(45,9),(46,1),(46,11),(47,4),(47,5),(47,6),
+(48,9),(48,8),(48,3),(49,7),(49,2),(49,4),(50,8),(50,7),(50,4)
+
+
+INSERT INTO RUNDA values(2,2,2,3),
+(3,4,3,1),(4,7,3,2),(5,9,5,5),
+(6,5,12,2),(7,3,1,4),(8,8,4,4),
+(9,5,7,3),(10,5,1,4),(11,1,6,3)

@@ -1,0 +1,19 @@
+f = open("bani.txt", "r")
+g = open("plata.txt", "w")
+
+bancnote = [int(x) for x in f.readline().split()]
+bancnote.sort(reverse=True)
+suma = int(f.readline())
+
+g.write(f"{suma} = ")
+
+for x in bancnote:
+    if x < suma:
+        nr = suma // int(x)
+        g.write(f"{x}*{nr}")
+        suma -= nr*int(x)
+        if suma:
+            g.write(" + ")
+
+f.close()
+g.close()

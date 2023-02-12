@@ -1,0 +1,32 @@
+﻿@if (ViewBag.Message != null)
+{
+    <h2 style="color: orange;">@ViewBag.Message</h2>
+}
+
+
+
+<div>
+    @foreach (var ticket in ViewBag.Tickets)
+    {
+        <div style="border: 3px solid black; margin-bottom: 5px; padding: 5px;">
+            <p>Titlu bilet: @ticket.TitluBilet</p>
+            <p>Film: @ticket.Movie.DenFilm</p>
+            <p>Pret: @ticket.Pret  lei</p>
+            <p>Data: @ticket.Data</p>
+
+            <div style="display:flex; gap: 10px; padding-bottom: 4px">
+                <a href="/Tickets/Show/@ticket.Id" style="padding: 3px; border: 3px solid green; text-decoration: none; color: black">Show Ticket</a>
+
+                <a href="/Tickets/Edit/@ticket.Id" style="padding: 3px; border: 3px solid orange; text-decoration: none; color: black">Edit Ticket</a>
+
+
+                <form method="post" action="/Tickets/Delete/@ticket.Id">
+                    <button style="border: 3px solid red; padding: 3px;">Delete Ticket</button>
+                </form>
+
+            </div>
+        </div>
+    }
+</div>
+
+                

@@ -1,0 +1,28 @@
+﻿@if (ViewBag.Message != null)
+{
+    <h2 style="color: green;">@ViewBag.Message</h2>
+}
+
+
+<div>
+    @foreach (var giftcard in ViewBag.GiftCards)
+    {
+        <div style="border: 3px solid black; margin-bottom: 5px; padding: 5px;">
+            <p>@giftcard.Denumire</p>
+            <p>@giftcard.Descriere</p>
+            <p>@giftcard.DataExp</p>
+            <p>@giftcard.Procent</p>
+            <p>@giftcard.Brand.Nume</p>
+
+            <div style="display:flex; gap: 10px; padding-bottom: 5px">
+                <form method="post" action="/GiftCards/Delete/@giftcard.Id">
+                    <button style="border: 3px solid red; padding: 2px;">Delete GiftCard</button>
+                </form>
+
+                <a href="/GiftCards/Edit/@giftcard.Id" style="padding: 2px; border: 3px solid orange; text-decoration: none; color: black">Edit GiftCard</a>
+                
+                <a href="/GiftCards/Show/@giftcard.Id" style="padding: 2px; border: 3px solid green; text-decoration: none; color: black">Show GiftCard</a>
+            </div>
+        </div>
+    }
+</div>

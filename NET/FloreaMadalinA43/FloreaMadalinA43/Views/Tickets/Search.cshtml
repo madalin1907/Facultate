@@ -1,0 +1,21 @@
+﻿<div>
+    @using (Html.BeginForm("Search", "Tickets", FormMethod.Get))
+    {
+        <div style="display:flex; justify-content: center; width: 100%; margin-bottom: 20px">
+            <input style="width:30%" type="text" name="searchInput" id="searchInput" placeholder=""/>
+        </div>
+    }
+
+    @foreach (var ticket in ViewBag.Tickets)
+    {
+        <div style="border: 3px solid black; margin-bottom: 5px; padding: 5px;">
+            <p>Titlu bilet: @ticket.TitluBilet</p>
+            <p>Film: @ticket.Movie.DenFilm</p>
+            <p>Pret: @ticket.Pret  lei</p>
+            <p>Data: @ticket.Data</p>
+        </div>
+    }
+    
+    <p>@ViewBag.Mesaj</p>
+
+</div>

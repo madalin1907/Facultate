@@ -1,0 +1,38 @@
+def dreptunghiuri(D, C):
+    arie_max = 0
+    D_max = None
+    faraCopaci = True
+    for copac in C:
+        if D[0][0] < copac[0] < D[1][0] and D[0][1] < copac[1] < D[1][1]:
+            arie1, D1 = dreptunghiuri([D[0], (D[1][0], copac[1])], C)
+            arie2, D2 = dreptunghiuri([(D[0][0], copac[1]), D[1]], C)
+
+            arie3, D3 = dreptunghiuri([D[0], (copac[0], D[1][1])], C)
+            arie4, D4 = dreptunghiuri([(copac[0], D[0][1]), D[1]], C)
+
+            (arie_max, D_max) = max([(arie_max, D_max), (arie1, D1), (arie2, D2), (arie3, D3), (arie4, D4)])
+
+            faraCopaci = False
+
+    if faraCopaci == True:
+        arie_max = (D[1][0] - D[0][0]) * (D[1][1] - D[0][1])
+        D_max = D
+
+    return arie_max, D_max
+
+
+f = open("copaci.in")
+s = f.readlines()
+f.close()
+
+padure = [tuple([int(nr) for nr in x.strip().split()]) for x in s[:2]]
+copaci = [tuple([int(nr) for nr in x.strip().split()]) for x in s[2:]]
+
+arie_max, D_max = dreptunghiuri(padure, copaci)
+
+g = open("copaci.out", "w")
+g.write("Dreptunghiul:\n")
+for x in D_max:
+    g.write(str(x[0]) + " " + str(x[1]) + "\n")
+g.write("Aria maxima:\n" + str(arie_max))
+g.close()

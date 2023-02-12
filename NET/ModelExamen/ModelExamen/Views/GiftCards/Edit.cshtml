@@ -1,0 +1,29 @@
+﻿@model GiftCard
+@using (Html.BeginForm("Edit", "GiftCards", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id)
+    <div>
+        @Html.LabelFor(model => model.Denumire)
+        @Html.TextBoxFor(model => model.Denumire)
+        @Html.ValidationMessageFor(model => model.Denumire)
+        <br />
+        @Html.LabelFor(model => model.Descriere)
+        @Html.TextBoxFor(model => model.Descriere)
+        @Html.ValidationMessageFor(model => model.Descriere)
+        <br />
+        @Html.LabelFor(model => model.DataExp)
+        @Html.TextBoxFor(model => model.DataExp)
+        @Html.ValidationMessageFor(model => model.DataExp)
+        <br />
+        @Html.LabelFor(model => model.Procent)
+        @Html.TextBoxFor(model => model.Procent)
+        @Html.ValidationMessageFor(model => model.Procent)
+        <br />
+        @Html.LabelFor(model => model.Denumire)
+        @Html.DropDownListFor(model => model.BrandId, new SelectList(Model.Brands, "Value", "Text"))
+        @Html.ValidationMessageFor(model => model.BrandId)
+        <br />
+
+        <button type="submit">Submit</button>
+    </div>
+}

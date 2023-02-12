@@ -1,0 +1,165 @@
+-- EXERCIȚIUL 11 --
+
+
+/* 1. Afisati numele și tag-ul echipelor care au meciuri pe arena Main Stage. */
+
+SELECT distinct concat(concat(ECHIPA.nume, ' (', ECHIPA.tag, ') '), 
+'are meciuri pe Main Stage') as Raspuns
+FROM ECHIPA, EVIDENTA_MECI, MECI, RUNDA, ARENA
+WHERE ECHIPA.id = EVIDENTA_MECI.id_echipa 
+  and EVIDENTA_MECI.id_meci = MECI.id 
+  and MECI.id = RUNDA.id_meci 
+  and RUNDA.id_arena = ARENA.id 
+  and upper(ARENA.nume) like upper('Main Stage');
+
+
+
+/* 2. Afisati titlurile meciurilor ce se dispută primăvara și conțin
+litera 'r', ordonate alfabetic dupa titlul meciului. */
+
+SELECT MECI.titlu FROM MECI WHERE MECI.titlu in 
+	(SELECT MECI.titlu FROM MECI WHERE MECI.id in 
+		(SELECT MECI.id FROM MECI WHERE
+			DATEPART(MONTH, MECI.data_start) > 2
+			and DATEPART(MONTH, MECI.data_start) < 6 
+			and MECI.titlu like '%r%'))
+ORDER BY MECI.titlu
+
+
+
+/* 3. Afișați detaliile meciurilor jucate de echipe din Europa
+în turnee ce au avut loc cu cel mult un an în urmă. */
+
+select PREZENTATOR.nume as [Nume prezentator], ARENA.nume as [Nume arena],
+	   MECI.titlu as [Titlu meci], GAMEMODE.nume as [Mod de joc]
+FROM RUNDA
+inner join MECI on RUNDA.id_meci = MECI.id
+inner join PREZENTATOR on RUNDA.id_prezentator = PREZENTATOR.id
+inner join GAMEMODE on RUNDA.id_gamemode = GAMEMODE.id
+inner join ARENA on RUNDA.id_arena = ARENA.id
+
+WHERE MECI.id in (select id_meci from EVIDENTA_MECI
+	where id_echipa in (select id from ECHIPA 
+	where ECHIPA.id_continent = (select id from CONTINENT
+	where CONTINENT.nume = 'Europe')) and id_echipa in (select id_echipa from EVIDENTA_GRUPA
+	where id_grupa in (select id from GRUPA
+	where id_turneu in (select id from TURNEU
+	where DATEDIFF(year, convert(date, sysdatetime()),TURNEU.data_start) <= 1 ))));
+
+
+
+/* 4. Afișați top 3 echipe ale căror jucători joacă în total mai multe mașini decât
+media tuturor echipelor, ordonate descrescător după numărul de mașini jucate. */
+
+WITH grup as(
+	SELECT COUNT(PRESET.id_masina) as [Numar masini], ECHIPA.nume as [Nume echipa]
+	FROM PRESET
+		inner join JUCATOR on PRESET.id_jucator = JUCATOR.id
+		inner join ECHIPA on JUCATOR.id_echipa = ECHIPA.id
+	GROUP BY ECHIPA.nume
+)
+
+SELECT TOP 3 [Numar masini], [Nume echipa] FROM grup
+WHERE [Numar masini] > (SELECT avg([Numar masini]) FROM grup)
+ORDER BY [Numar masini] desc
+
+
+
+/* 5. Afișați pentru fiecare jucător numele, rank-ul avut și numărul de mașini jucate sub forma
+unui mesaj (utilizand case), în ordine descrescatoare după numărul de mașini jucate. */
+
+SELECT j.nume as Nume, j.rank as Rank,
+	CASE
+		when (select count(id_jucator) from PRESET
+			where PRESET.id_jucator = j.id) >= 4 then '4 sau mai multe masini'
+		when (select count(id_jucator) from PRESET
+			where PRESET.id_jucator = j.id) = 3 then '3 masini'
+		when (select count(id_jucator) from PRESET
+			where PRESET.id_jucator = j.id) = 2 then '2 masini'
+		else '1 masina'
+	END AS [Masini folosite]
+FROM JUCATOR j ORDER BY [Masini folosite] desc
+
+
+
+
+
+
+
+-- EXERCIȚIUL 12 --
+
+
+/* 1. Gamemode-ul Snow Day va fi exclus din cadrul turneelor generând un interes
+scăzut în cadrul spectatorilor și va fi înlocuit cu modul Chaos, pe stadionul
+Champions Field (Night). */
+
+UPDATE GAMEMODE
+SET nume = 'Chaos', stadion = 'Champions Field (Night)'
+WHERE id in (SELECT id FROM GAMEMODE WHERE nume = 'Snow Day')
+
+
+
+/* 2. Deoarece hitbox-ul "Plank" este cel mai slab din cadrul jocului, 
+niciun jucător nu mai joacă cu mașina Mantis. Mulți dintre aceștia au
+ales să joace cu o mașină nou adăugată (Ford Mustang Mach-E RLE), mult
+mai bună datorită hitbox-ului "Octane" */
+
+UPDATE MASINA
+SET hitbox = 'Octane', nume = 'Ford Mustang Mach-E RLE'
+WHERE id in (SELECT id FROM MASINA WHERE nume = 'Mantis')
+
+
+
+/* 3. Deoarece arenele "Octane Garage" și "Breakout Nitro", folosite pentru organizarea
+meciurile care nu generau un interes atât de mare din partea publicului, au început să
+se umple la fiecare meci susținut, organizatorii au decis o renovare, iar capacitatea
+amândurora a fost mărită la 17500 de locuri.
+*/
+
+UPDATE ARENA
+SET nr_locuri = 17500
+WHERE id in (SELECT id FROM ARENA WHERE nume = 'Octane Garage' or nume = 'Breakout Nitro')
+
+
+
+
+
+
+
+-- EXERCIȚIUL 14 --
+
+
+CREATE VIEW [NRG] as
+SELECT j.nume as [Jucatorii echipei NRG] from JUCATOR j
+WHERE j.id_echipa = (select e.id from ECHIPA e where e.tag = '[NRG]')
+
+/* ALLOWED - UPDATE ROW deoarece nu folosim funcții grup / clauza GROUP BY /
+cuvântul cheie distinct / pseudocoloana ROWNUM și nici coloane definite prin expresii. */
+
+UPDATE [NRG] 
+SET [NRG].[Jucatorii echipei NRG] = 'Ka0os1'
+WHERE [NRG].[Jucatorii echipei NRG] = 'Ka0os'
+
+
+/* NOT ALLOWED - INSERT ROW deoarece există coloane NOT NULL fără valoare implicită în
+tabelul de bază care nu au fost selectate în vedere (în cazul de față - coloana rank). */
+
+INSERT INTO [NRG] values ('Ka0os2')
+
+
+
+
+
+
+
+-- EXERCIȚIUL 15 --
+
+
+/* Afișează id-ul continentului, numele și rank-ul jucatorilor unde id-ul regiunii
+este 2 și rank-ul este 'Supersonic Legend'. */
+
+create index index_jucator_nume_rank
+on JUCATOR(id_continent, nume, rank)
+
+select id_continent, nume, rank from JUCATOR
+where id_continent = 2 and rank = 'Supersonic Legend'

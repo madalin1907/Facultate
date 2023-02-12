@@ -1,0 +1,28 @@
+﻿@model Ticket
+@using (Html.BeginForm("Edit", "Tickets", FormMethod.Post))
+{
+    @Html.HiddenFor(model => model.Id)
+    <div>
+        @Html.LabelFor(model => model.TitluBilet)
+        @Html.TextBoxFor(model => model.TitluBilet)
+        @Html.ValidationMessageFor(model => model.TitluBilet)
+        <br/>
+        
+        @Html.LabelFor(model => model.Pret)
+        @Html.TextBoxFor(model => model.Pret)
+        @Html.ValidationMessageFor(model => model.Pret)
+        <br/>
+        
+        @Html.LabelFor(model => model.Data)
+        @Html.TextBoxFor(model => model.Data)
+        @Html.ValidationMessageFor(model => model.Data)
+        <br/>
+        
+        @Html.LabelFor(model => model.MovieId)
+        @Html.DropDownListFor(model => model.MovieId, new SelectList(Model.Movies, "Value", "Text"))
+        @Html.ValidationMessageFor(model => model.MovieId)
+        <br/>
+
+        <button type="submit">Submit</button>
+    </div>
+}
