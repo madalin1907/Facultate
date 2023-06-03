@@ -1,0 +1,82 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+class FirExecutie1 extends Thread {
+    private String numeFisier;
+    private String user;
+    private String data;
+    private int conectari;
+
+    public FirExecutie1(String numeFisier, String user, String data) {
+        this.numeFisier = numeFisier;
+        this.user = user;
+        this.data = data;
+        this.conectari = 0;
+    }
+
+    public int getConectari() {
+        return conectari;
+    }
+
+    @Override
+    public void run()
+    {
+        try
+        {
+            Scanner in = new Scanner(new File("src/"+numeFisier));
+
+            while(in.hasNextLine())
+            {
+               String line = in.nextLine();
+               String[] tokens = line.split(",");
+                if(tokens[0].equals(user) && tokens[1].equals(data))
+                {
+                     conectari++;
+                }
+            }
+
+            in.close();
+        }
+        catch (FileNotFoundException ex)
+        {
+            System.out.println("Eroare deschidere fisier!");
+        }
+    }
+
+
+}
+
+
+public class Loguri {
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduceti numele utilizatorului: ");
+        String user = in.nextLine();
+
+        System.out.println("Introduceti data: ");
+        String data = in.nextLine();
+
+        FirExecutie1 f_1 = new FirExecutie1("loguri1.txt", user, data);
+        FirExecutie1 f_2 = new FirExecutie1("loguri2.txt", user, data);
+
+        f_1.start();
+        f_2.start();
+
+        try
+        {
+            f_1.join();
+            f_2.join();
+        }
+        catch (InterruptedException ex)
+        {
+            System.out.println("Eroare la join!");
+        }
+
+        System.out.println("Numarul de conectari este: " + (f_1.getConectari() + f_2.getConectari()));
+    }
+
+
+
+}

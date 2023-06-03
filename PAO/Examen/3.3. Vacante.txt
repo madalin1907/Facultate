@@ -1,0 +1,68 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+class FirExecutie4 extends Thread {
+
+    private String numeFisier;
+
+    private String destinatie;
+
+    private int valoare;
+
+    public FirExecutie4(String numeFisier, String destinatie){
+        this.numeFisier = numeFisier;
+        this.destinatie = destinatie;
+        this.valoare = 0;
+    }
+
+    public int getValoare(){
+        return valoare;
+    }
+
+    @Override
+    public void run(){
+        try{
+            Scanner in = new Scanner(new File("src/" + numeFisier));
+            while(in.hasNextLine()){
+                String line = in.nextLine();
+                String[] tokens = line.split(",");
+                if(tokens[0].equals(destinatie)){
+                    valoare += Integer.parseInt(tokens[2])  ;
+                }
+
+            }
+            in.close();
+        }
+        catch(FileNotFoundException ex){
+            System.out.println("Eroare deschidere fisier!");
+        }
+    }
+
+}
+public class Vacante {
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduceti destinatia: ");
+        String destinatie = in.nextLine();
+
+        FirExecutie4 fir1 = new FirExecutie4("vacante1.txt", destinatie);
+        FirExecutie4 fir2 = new FirExecutie4("vacante2.txt", destinatie);
+
+        fir1.start();
+        fir2.start();
+
+        try{
+            fir1.join();
+            fir2.join();
+
+            System.out.println("Valoare totala: " + (fir1.getValoare() + fir2.getValoare()));
+        }
+        catch(InterruptedException ex){
+            System.out.println("Eroare fir de executie!");
+        }
+
+        System.out.println("Valoare totala: " + (fir1.getValoare() + fir2.getValoare()));
+    }
+}

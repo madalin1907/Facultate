@@ -1,0 +1,66 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+class FirExecutie3 extends Thread{
+    private int valoare;
+    private String numeFisier;
+    private String produs;
+
+    public FirExecutie3(String produs, String numeFisier){
+        this.produs = produs;
+        this.numeFisier = numeFisier;
+        this.valoare = 0;
+    }
+    
+    public int getValoare(){
+        return valoare;
+    }
+
+    @Override
+    public void run(){
+        try{
+            Scanner in = new Scanner(new File("src/" + numeFisier));
+            while(in.hasNextLine()){
+                String line = in.nextLine();
+                String[] tokens = line.split(",");
+                if(tokens[1].equals(produs)){
+                    valoare += Integer.parseInt(tokens[2]) * Integer.parseInt(tokens[3]) ;
+                }
+            }
+            in.close();
+        }
+        catch(FileNotFoundException ex){
+            System.out.println("Eroare deschidere fisier!");
+        }
+    }
+}
+
+public class Produse {
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduceti numele produsului: ");
+        String produs = in.nextLine();
+
+        FirExecutie3 fir1 = new FirExecutie3(produs, "magazin1.txt");
+        FirExecutie3 fir2 = new FirExecutie3(produs, "magazin2.txt");
+
+        fir1.start();
+        fir2.start();
+
+        try{
+            fir1.join();
+            fir2.join();
+
+
+        }
+        catch(InterruptedException ex){
+            System.out.println("Eroare fir de executie!");
+        }
+
+        System.out.println("Valoare totala: " + (fir1.getValoare() + fir2.getValoare()));
+    }
+
+
+}

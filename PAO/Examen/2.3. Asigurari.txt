@@ -1,0 +1,71 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+class FirExecutie5 extends Thread{
+    private String numeFisier;
+
+    private String tip;
+
+    int nr;
+
+    public FirExecutie5(String numeFisier, String tip){
+        this.numeFisier = numeFisier;
+        this.tip = tip;
+        this.nr =0;
+    }
+
+    public int getNr(){
+        return nr;
+    }
+
+    @Override
+    public void run(){
+        try{
+            Scanner in = new Scanner(new File("src/" + numeFisier));
+            while(in.hasNextLine()){
+                String line = in.nextLine();
+                String[] tokens = line.split(",");
+
+                if(tokens[0].equals(tip)){
+                    nr+=Integer.parseInt(tokens[2]);
+                }
+
+            }
+            in.close();
+        }
+        catch(FileNotFoundException ex){
+            System.out.println("Eroare deschidere fisier!");
+        }
+    }
+
+}
+
+
+public class Asigurari {
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduceti tipul asigurarii: ");
+        String tip = in.nextLine();
+
+        FirExecutie5 fir1 = new FirExecutie5("asigurari1.txt", tip);
+        FirExecutie5 fir2 = new FirExecutie5("asigurari2.txt", tip);
+
+        fir1.start();
+        fir2.start();
+
+        try{
+            fir1.join();
+            fir2.join();
+
+        }
+        catch(InterruptedException ex){
+            System.out.println("Eroare fir de executie!");
+        }
+
+        System.out.println("Valoare totala: " + (fir1.getNr() + fir2.getNr()));
+    }
+
+
+}

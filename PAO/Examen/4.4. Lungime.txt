@@ -1,0 +1,71 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+class FirExecutie2 extends Thread{
+    private String numeFisier;
+
+    private int len;
+    private int nr;
+
+    public FirExecutie2(int len, String numeFisier){
+        this.len = len;
+        this.numeFisier = numeFisier;
+        this.nr =0;
+    }
+
+    public int getNr(){
+        return nr;
+    }
+
+    @Override
+    public void run(){
+        try{
+            Scanner in = new Scanner(new File("src/" + numeFisier));
+            while(in.hasNextLine()){
+                String line = in.nextLine();
+                String[] tokens = line.split("[ .,:;!?]+");
+                System.out.println(tokens[0]);
+                for(int i=0;i<tokens.length;i++){
+                    if(tokens[i].length()==len){
+                        nr++;
+                    }
+                }
+            }
+            in.close();
+        }
+        catch(FileNotFoundException ex){
+            System.out.println("Eroare deschidere fisier!");
+        }
+    }
+
+}
+
+
+public class Lungime {
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduceti lungimea cuvantului: ");
+        int len = in.nextInt();
+
+        FirExecutie2 fir1 = new FirExecutie2(len, "poezie1.txt");
+        FirExecutie2 fir2 = new FirExecutie2(len, "poezie2.txt");
+
+        fir1.start();
+        fir2.start();
+
+        try{
+            fir1.join();
+            fir2.join();
+        }
+        catch(InterruptedException ex){
+            System.out.println("Eroare la join!");
+        }
+
+        System.out.println("Numarul de cuvinte de lungime " + len + " din poezie1.txt este: " + fir1.getNr());
+        System.out.println("Numarul de cuvinte de lungime " + len + " din poezie2.txt este: " + fir2.getNr());
+    }
+
+
+}
