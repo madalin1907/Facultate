@@ -1,0 +1,4 @@
+Unghiuri -- CONCAV -> Au unghiul mai mare de 180 de grade in interiorul poligonului
+         -- CONVEX -> Au unghiul mai mic de 180 de grade in interiorul poligonului
+
+Varf Principal -- Daca unim un segment intre pctele vecine, trebuie sa fie ori full in interior ori in exteriorul poligonului
