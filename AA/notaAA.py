@@ -7,8 +7,8 @@ roby = 10
 acoperire_convexa_poligon_stelat = 10
 
 # Probleme laborator 2
-punct_in_poligon_convex = 10
-pozitia_unui_punct_fata_de_un_poligon = 7
+punct_in_poligon_convex = 7
+pozitia_unui_punct_fata_de_un_poligon = 10
 monotonia_unui_poligon = 7
 
 # Probleme laborator 3
@@ -25,7 +25,7 @@ tema_seminar = 0
 
 
 # EXAMEN (50% DIN NOTA FINALA)
-nota_examen = 2.18
+nota_examen = 4.5
 
 
 
