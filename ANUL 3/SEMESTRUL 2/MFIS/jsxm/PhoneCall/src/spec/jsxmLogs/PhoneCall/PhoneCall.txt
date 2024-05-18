@@ -1,0 +1,192 @@
+PhoneCall 12:21:20.580 [pool-3-thread-1] ERROR org.jsxm.jsxmcore.util.XML - IOException : No 'definitions.xml' file. Continue with no definitions.
+PhoneCall 12:21:20.585 [pool-3-thread-1] INFO  org.jsxm.jsxmcore.core.SXMBaseGeneration - TYPES USED in the specification: 
+PhoneCall 12:21:20.585 [pool-3-thread-1] INFO  org.jsxm.jsxmcore.core.SXMBaseGeneration - Standard types: 
+PhoneCall 12:21:20.585 [pool-3-thread-1] INFO  org.jsxm.jsxmcore.core.SXMBaseGeneration - User defined types: 
+PhoneCall 12:21:20.585 [pool-3-thread-1] INFO  org.jsxm.jsxmcore.core.SXMBaseGeneration - 
+
+PhoneCall 12:21:20.585 [pool-3-thread-1] WARN  org.jsxm.jsxmcore.core.SXMBaseGeneration - 
+Warning in the specification:
+PhoneCall 12:21:20.585 [pool-3-thread-1] WARN  org.jsxm.jsxmcore.core.SXMBaseGeneration - No [methods] tag.
+PhoneCall 12:21:20.585 [pool-3-thread-1] WARN  org.jsxm.jsxmcore.core.SXMBaseGeneration - 
+
+PhoneCall 12:21:20.585 [pool-3-thread-1] WARN  org.jsxm.jsxmcore.core.SXMBaseGeneration - 
+Warning in the specification:
+PhoneCall 12:21:20.585 [pool-3-thread-1] WARN  org.jsxm.jsxmcore.core.SXMBaseGeneration - No [methods] tag.
+PhoneCall 12:21:20.585 [pool-3-thread-1] WARN  org.jsxm.jsxmcore.core.SXMBaseGeneration - 
+
+PhoneCall 12:21:20.586 [pool-3-thread-1] INFO  org.jsxm.jsxmcore.core.SXMBaseGeneration - [closePhone -> closePhoneOut # [], endCall -> endCallOut # [], openPhone -> openPhoneOut # [], holdCall -> holdCallOut # [], resumeCall -> resumeCallOut # [], startCall -> startCallOut # []]
+PhoneCall 12:21:20.587 [pool-3-thread-1] INFO  org.jsxm.maven.plugin.jsxmtool.compilation.sxm.SxmCompiler - ---  Java files from JSXM specification PhoneCall.xml generated successfully ---
+PhoneCall 12:21:21.113 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Txt path : C:\Tools\Proiect MFIS\jsxm\PhoneCall\src\spec\jsxmLogs\PhoneCall\PhoneCall.txt
+PhoneCall 12:21:21.113 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Pdf path : C:\Tools\Proiect MFIS\jsxm\PhoneCall\src\spec\jsxmLogs\PhoneCall\PhoneCall.pdf
+PhoneCall 12:21:21.286 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - SXM Animator in interactive mode.
+
+PhoneCall 12:21:21.286 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.gui.SxmGuiAnimator - SXM Animator in interactive mode.
+
+PhoneCall 12:21:21.287 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.gui.SxmGuiAnimator - Enter .h. to see a list of commands.
+
+PhoneCall 12:21:21.287 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Enter .h. to see a list of commands.
+
+PhoneCall 12:21:21.287 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Machine has been reset.
+PhoneCall 12:21:21.287 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Machine has been reset.
+PhoneCall 12:21:21.287 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:21.287 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:21.288 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:21.288 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:21.288 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:21.288 [main] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:24.139 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:24.144 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:24.145 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:24.146 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:24.147 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:24.147 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : closedPhone
+PhoneCall 12:21:24.147 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:24.147 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : closePhone()
+PhoneCall 12:21:24.150 [AWT-EventQueue-0] ERROR org.jsxm.jsxmcore.core.SXM - Warning! Unhandled input: closePhone()
+PhoneCall 12:21:24.150 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  ERROR : closePhone_Error
+PhoneCall 12:21:24.150 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:24.150 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : closePhone_Error
+PhoneCall 12:21:24.151 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:24.151 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:24.151 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:24.151 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:24.151 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:26.898 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:26.899 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:26.899 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:26.899 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:26.900 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:26.900 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : closedPhone
+PhoneCall 12:21:26.901 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:26.901 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : resumeCall()
+PhoneCall 12:21:26.901 [AWT-EventQueue-0] ERROR org.jsxm.jsxmcore.core.SXM - Warning! Unhandled input: resumeCall()
+PhoneCall 12:21:26.901 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  ERROR : resumeCall_Error
+PhoneCall 12:21:26.901 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:26.901 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : resumeCall_Error
+PhoneCall 12:21:26.902 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:26.902 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:26.902 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:26.902 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:26.902 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:32.481 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : closedPhone
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:32.482 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : openPhone()
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  OUTPUT : openPhoneOut
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : openPhoneOut
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : openedPhone
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:32.483 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:32.484 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:36.815 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : openedPhone
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : openedPhone
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:36.816 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : startCall()
+PhoneCall 12:21:36.817 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  OUTPUT : startCallOut
+PhoneCall 12:21:36.817 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:36.817 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : startCallOut
+PhoneCall 12:21:36.817 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:36.817 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : activeCall
+PhoneCall 12:21:36.818 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:36.819 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:36.819 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:40.861 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : activeCall
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : activeCall
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : holdCall()
+PhoneCall 12:21:40.862 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  OUTPUT : holdCallOut
+PhoneCall 12:21:40.863 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:40.863 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : holdCallOut
+PhoneCall 12:21:40.863 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:40.863 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : onHoldCall
+PhoneCall 12:21:40.864 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:40.864 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:40.864 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:44.695 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : onHoldCall
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : onHoldCall
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:44.696 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : closePhone()
+PhoneCall 12:21:44.697 [AWT-EventQueue-0] ERROR org.jsxm.jsxmcore.core.SXM - Warning! Unhandled input: closePhone()
+PhoneCall 12:21:44.698 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  ERROR : closePhone_Error
+PhoneCall 12:21:44.698 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:44.699 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : closePhone_Error
+PhoneCall 12:21:44.699 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:44.699 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : onHoldCall
+PhoneCall 12:21:44.699 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:44.699 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:44.699 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:49.202 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : onHoldCall
+PhoneCall 12:21:49.202 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:49.202 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:49.203 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:49.203 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:49.203 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : onHoldCall
+PhoneCall 12:21:49.203 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:49.203 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : resumeCall()
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  OUTPUT : resumeCallOut
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : resumeCallOut
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : activeCall
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:49.204 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:52.376 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : activeCall
+PhoneCall 12:21:52.376 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:52.376 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:52.376 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : activeCall
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : endCall()
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  OUTPUT : endCallOut
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : endCallOut
+PhoneCall 12:21:52.377 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:52.378 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : openedPhone
+PhoneCall 12:21:52.378 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:52.378 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:52.378 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:57.800 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : openedPhone
+PhoneCall 12:21:57.801 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:57.802 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:57.802 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:21:57.802 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053
+PhoneCall 12:21:57.802 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   STATE : openedPhone
+PhoneCall 12:21:57.802 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  MEMORY : 
+PhoneCall 12:21:57.802 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053   INPUT : closePhone()
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---org.jsxm.jsxmcore.types.PhoneCallSXM@5d30b053  OUTPUT : closePhoneOut
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.jsxmcore.core.SXM - ---
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Output : closePhoneOut
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:21:57.803 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:22:06.268 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:22:06.268 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:22:06.269 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:22:06.269 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 
+PhoneCall 12:22:06.270 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - PhoneCall animation has been saved
+PhoneCall 12:22:06.271 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - STATE  : closedPhone
+PhoneCall 12:22:06.271 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - MEMORY : 
+PhoneCall 12:22:06.271 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - ------------------------------------------------------------
+PhoneCall 12:22:06.271 [AWT-EventQueue-0] INFO  org.jsxm.maven.plugin.jsxmtool.animation.userinterface.console.SxmConsoleAnimator - Input  : 

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXM name="PhoneCall"
+	xmlns="http://www.jsxm.org/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/specification.xsd">
+
+	<!-- States definition -->
+	<states>
+		<state name="openedPhone"/>
+		<state name="closedPhone"/>
+		<state name="activeCall"/>
+		<state name="onHoldCall"/>
+	</states>
+
+	<!-- Initial State definition -->
+	<initialState state="closedPhone"/>
+
+	<!-- Transitions definition -->
+	<transitions>
+		<transition from="closedPhone" function="openPhone"  to="openedPhone"/>
+		
+		<transition from="openedPhone" function="startCall"  to="activeCall"/>
+		<transition from="openedPhone" function="closePhone" to="closedPhone"/>
+		
+		<transition from="activeCall"  function="endCall"    to="openedPhone"/>
+		<transition from="activeCall"  function="holdCall"   to="onHoldCall"/>
+		
+		<transition from="onHoldCall"  function="endCall"    to="openedPhone"/>
+		<transition from="onHoldCall"  function="resumeCall" to="activeCall"/>
+	</transitions>
+	
+	<memory>
+		<declaration></declaration>
+		<initial></initial>
+		<display></display>
+	</memory>
+
+	<!-- Inputs definition -->
+	<inputs>
+		<input name="openPhone"/>
+		<input name="closePhone"/>
+		<input name="startCall"/>
+		<input name="holdCall"/>
+		<input name="resumeCall"/>
+		<input name="endCall"/>
+	</inputs>
+
+	<!-- Outputs definition -->
+	<outputs>
+		<output name="openPhoneOut"/>
+		<output name="closePhoneOut"/>
+		<output name="startCallOut"/>
+		<output name="holdCallOut"/>
+		<output name="resumeCallOut"/>
+		<output name="endCallOut"/>
+	</outputs>
+
+	<!-- Functions definition -->
+	<functions>
+		<function name="openPhone" input="openPhone" output="openPhoneOut" xsi:type="OutputFunction">
+		</function>
+		
+		<function name="closePhone" input="closePhone" output="closePhoneOut" xsi:type="OutputFunction">
+		</function>
+		
+		<function name="startCall" input="startCall" output="startCallOut" xsi:type="OutputFunction">
+		</function>
+		
+		<function name="holdCall" input="holdCall" output="holdCallOut" xsi:type="OutputFunction">
+		</function>
+		
+		<function name="resumeCall" input="resumeCall" output="resumeCallOut" xsi:type="OutputFunction">
+		</function>
+		
+		<function name="endCall" input="endCall" output="endCallOut" xsi:type="OutputFunction">
+		</function>
+		
+		
+	</functions>
+
+	<!-- Test Input Generation definition -->
+	<testinputgeneration>
+		<inputgenerator function="openPhone"></inputgenerator>
+		<inputgenerator function="closePhone"></inputgenerator>
+		<inputgenerator function="startCall"></inputgenerator>
+		<inputgenerator function="holdCall"></inputgenerator>
+		<inputgenerator function="resumeCall"></inputgenerator>
+		<inputgenerator function="endCall"></inputgenerator>
+	</testinputgeneration>
+
+</SXM>

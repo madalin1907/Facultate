@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://www.jsxm.org/schema"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/output.xsd">
+	<call>
+		<input name="open" />
+		<output name="openOut" />
+	</call>
+	<call>
+		<input name="deposit">
+			<amount type="xs:int">7</amount>
+		</input>
+		<output name="depositOut">
+			<amount type="xs:int">7</amount>
+		</output>
+	</call>
+	<call>
+		<input name="withdraw">
+			<amount type="xs:int">8</amount>
+		</input>
+		<output name="withdraw_Error" />
+	</call>
+	<call>
+		<input name="close" />
+		<output name="close_Error" />
+	</call>
+	<call>
+		<input name="withdraw">
+			<amount type="xs:int">7</amount>
+		</input>
+		<output name="withdrawOut">
+			<amount type="xs:int">7</amount>
+		</output>
+	</call>
+	<call>
+		<input name="close" />
+		<output name="closeOut" />
+	</call>
+</sequence>
+

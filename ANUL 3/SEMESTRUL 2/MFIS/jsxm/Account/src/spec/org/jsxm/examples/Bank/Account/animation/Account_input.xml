@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://www.jsxm.org/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/input.xsd">
+  <call>
+    <input name="deposit">
+      <amount type="xs:int">321</amount>
+    </input>
+  </call>
+  <call>
+    <input name="open" />
+  </call>
+  <call>
+    <input name="getBalance" />
+  </call>
+  <call>
+    <input name="deposit">
+      <amount type="xs:int">888</amount>
+    </input>
+  </call>
+  <call>
+    <input name="withdraw">
+      <amount type="xs:int">33231</amount>
+    </input>
+  </call>
+  <call>
+    <input name="withdraw">
+      <amount type="xs:int">777</amount>
+    </input>
+  </call>
+  <call>
+    <input name="close" />
+  </call>
+  <call>
+    <input name="withdraw">
+      <amount type="xs:int">111</amount>
+    </input>
+  </call>
+  <call>
+    <input name="close" />
+  </call>
+</sequence>
+

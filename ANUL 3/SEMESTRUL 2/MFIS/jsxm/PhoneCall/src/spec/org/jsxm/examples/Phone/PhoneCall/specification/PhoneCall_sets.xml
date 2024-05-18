@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sets 
+    xmlns="http://www.jsxm.org/schema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/sets.xsd">
+
+    <!-- Characterization definition -->
+    <characterization>
+        <sequence>
+            <function name="startCall" />
+        </sequence>
+        <sequence>
+            <function name="holdCall" />
+        </sequence>
+        <sequence>
+            <function name="resumeCall" />
+        </sequence>
+        <sequence>
+            <function name="endCall" />
+        </sequence>
+        
+    </characterization>
+
+    <!-- StateCover definition -->
+    <statecover>
+        <sequence>
+        </sequence>
+
+        <sequence>
+            <function name="startCall" />
+        </sequence>
+         <sequence>
+            <function name="startCall" />
+            <function name="holdCall" />
+        </sequence>
+        <sequence>
+            <function name="holdCall" />
+            <function name="resumeCall" />
+        </sequence>
+        <sequence>
+            <function name="resumeCall" />
+            <function name="endCall" />
+        </sequence>
+    </statecover>
+</sets>

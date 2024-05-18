@@ -1,0 +1,18 @@
+ 12:20:40.489 [main] INFO  org.jsxm.maven.plugin.jsxmtool.core.JSXMThreadPoolFactory - ---  Single Threading with newFixedThreadPool with one thread.
+ 12:20:40.583 [main] INFO  org.jsxm.maven.plugin.jsxmtool.validation.SxmValidationManager - ---  Validation completed successfully.!
+ 12:20:40.606 [main] INFO  org.jsxm.maven.plugin.jsxmtool.validation.SxmValidationManager - ---  Validating phase done : 119 ms
+ 12:20:40.611 [main] INFO  org.jsxm.maven.plugin.jsxmtool.compilation.sxm.SxmCompilationManager - Testing directories
+ 12:20:40.612 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.SxmCompilationUtils -   ---> Account
+ 12:20:40.630 [main] INFO  org.jsxm.maven.plugin.jsxmtool.core.JSXMThreadPoolFactory - ---  Multithreading with newFixedThreadPool of16 threads.
+ 12:20:40.650 [main] INFO  org.jsxm.maven.plugin.jsxmtool.compilation.sxm.SxmCompilationManager - ---  Compiling phase done : 40 ms
+general-Log 12:20:41.185 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Txt path : C:\Tools\Proiect MFIS\jsxm\Account\src\spec\jsxmLogs\general-Log\general-Log.txt
+general-Log 12:20:41.185 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Pdf path : C:\Tools\Proiect MFIS\jsxm\Account\src\spec\jsxmLogs\general-Log\general-Log.pdf
+ 12:20:41.193 [main] INFO  org.jsxm.maven.plugin.jsxmtool.core.JSXMThreadPoolFactory - ---  Multithreading with newFixedThreadPool of16 threads.
+general-Log 12:20:41.345 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Txt path : C:\Tools\Proiect MFIS\jsxm\Account\src\spec\jsxmLogs\general-Log\general-Log.txt
+general-Log 12:20:41.345 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Pdf path : C:\Tools\Proiect MFIS\jsxm\Account\src\spec\jsxmLogs\general-Log\general-Log.pdf
+ 12:20:41.353 [main] INFO  org.jsxm.maven.plugin.jsxmtool.generation.SxmGenerationManager - ---  Generation phase done : 160 ms
+
+ 12:20:41.353 [main] INFO  org.jsxm.maven.plugin.jsxmtool.core.JSXMThreadPoolFactory - ---  Multithreading with newFixedThreadPool of16 threads.
+general-Log 12:20:41.433 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Txt path : C:\Tools\Proiect MFIS\jsxm\Account\src\spec\jsxmLogs\general-Log\general-Log.txt
+general-Log 12:20:41.433 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Pdf path : C:\Tools\Proiect MFIS\jsxm\Account\src\spec\jsxmLogs\general-Log\general-Log.pdf
+ 12:20:41.441 [main] INFO  org.jsxm.maven.plugin.jsxmtool.generation.SxmTransformationManager - ---  Transformation phase done : 88 ms

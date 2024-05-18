@@ -1,0 +1,106 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.jsxm.examples.Bank</groupId>
+	<artifactId>Account</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+	<name>Account</name>
+	<url>http://www.jsxm.org</url>
+	<inceptionYear>2010</inceptionYear>
+	<licenses>
+		<license>
+			<comments>
+				JSXM CONFIDENTIAL
+   				__________________
+ 				Unpublished Copyright © 2010-2013 Dimitris Dranidis,
+  				All Rights Reserved.
+
+  				NOTICE:  All information contained herein is, and remains the property of Dimitris Dranidis .
+
+ 				The intellectual and technical concepts contained herein are proprietary to the owner
+  				Dimitris Dranidis and may be covered by U.S and Foreign Patents, patents in process,
+  				and are protected by trade secret or copyright law. Dissemination of this information or
+  				reproduction of this material is strictly forbidden unless prior written permission is
+  				obtained from Dimitris Dranidis. Access to the source code contained herein is hereby
+  				forbidden to anyone except the owner.Confidentiality and Non-disclosure agreements
+ 				explicitly covering such access.
+
+  				The copyright notice above does not evidence any actual or intended publication
+  				or disclosure  of  this source code, which includes information that is confidential
+  				and/or proprietary, and is a trade secret, of  Dimitris Dranidis. ANY REPRODUCTION,
+  				MODIFICATION, DISTRIBUTION, PUBLIC  PERFORMANCE, OR PUBLIC DISPLAY OF OR THROUGH USE  OF
+  				THIS  SOURCE CODE  WITHOUT  THE EXPRESS WRITTEN CONSENT OF Dimitris Dranidis IS STRICTLY PROHIBITED,
+  				AND IN VIOLATION OF APPLICABLE LAWS AND INTERNATIONAL TREATIES.  THE RECEIPT OR POSSESSION OF
+  				THIS SOURCE CODE AND/OR RELATED INFORMATION DOES NOT CONVEY OR IMPLY ANY RIGHTS
+  				TO REPRODUCE, DISCLOSE OR DISTRIBUTE ITS CONTENTS, OR TO MANUFACTURE, USE, OR SELL
+  				ANYTHING THAT IT  MAY DESCRIBE, IN WHOLE OR IN PART.
+  			</comments>
+		</license>
+	 </licenses>
+
+	<developers>
+		<developer>
+			<name>Dimitris Dranidis</name>
+			<email>dranidis@gmail.com</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</releases>
+			<id>jsxm</id>
+			<name>JSXM Model Based Testing</name>
+			<url>http://www.jsxm.org/maven2/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12</version>
+				<configuration>
+					<parallel>methods</parallel>
+					<useUnlimitedThreads>true</useUnlimitedThreads>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jsxm.maven.plugin</groupId>
+				<artifactId>jsxm-maven-plugin</artifactId>
+				<version>1.4.11-RC4</version>
+				<configuration>
+				    <animateAll>true</animateAll>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

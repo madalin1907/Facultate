@@ -1,0 +1,9 @@
+ 12:21:20.449 [main] INFO  org.jsxm.maven.plugin.jsxmtool.core.JSXMThreadPoolFactory - ---  Single Threading with newFixedThreadPool with one thread.
+ 12:21:20.536 [main] INFO  org.jsxm.maven.plugin.jsxmtool.validation.SxmValidationManager - ---  Validation completed successfully.!
+ 12:21:20.553 [main] INFO  org.jsxm.maven.plugin.jsxmtool.validation.SxmValidationManager - ---  Validating phase done : 106 ms
+ 12:21:20.558 [main] INFO  org.jsxm.maven.plugin.jsxmtool.compilation.sxm.SxmCompilationManager - Testing directories
+ 12:21:20.558 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.SxmCompilationUtils -   ---> PhoneCall
+ 12:21:20.573 [main] INFO  org.jsxm.maven.plugin.jsxmtool.core.JSXMThreadPoolFactory - ---  Multithreading with newFixedThreadPool of16 threads.
+ 12:21:20.587 [main] INFO  org.jsxm.maven.plugin.jsxmtool.compilation.sxm.SxmCompilationManager - ---  Compiling phase done : 31 ms
+general-Log 12:21:21.015 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Txt path : C:\Tools\Proiect MFIS\jsxm\PhoneCall\src\spec\jsxmLogs\general-Log\general-Log.txt
+general-Log 12:21:21.015 [main] INFO  org.jsxm.maven.plugin.jsxmtool.utilities.JSXMUtils - Pdf path : C:\Tools\Proiect MFIS\jsxm\PhoneCall\src\spec\jsxmLogs\general-Log\general-Log.pdf

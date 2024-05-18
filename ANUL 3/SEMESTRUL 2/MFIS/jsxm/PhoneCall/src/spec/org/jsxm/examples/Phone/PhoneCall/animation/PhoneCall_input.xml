@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://www.jsxm.org/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/input.xsd">
+  <call>
+    <input name="closePhone" />
+  </call>
+  <call>
+    <input name="resumeCall" />
+  </call>
+  <call>
+    <input name="openPhone" />
+  </call>
+  <call>
+    <input name="startCall" />
+  </call>
+  <call>
+    <input name="holdCall" />
+  </call>
+  <call>
+    <input name="closePhone" />
+  </call>
+  <call>
+    <input name="resumeCall" />
+  </call>
+  <call>
+    <input name="endCall" />
+  </call>
+  <call>
+    <input name="closePhone" />
+  </call>
+</sequence>
+

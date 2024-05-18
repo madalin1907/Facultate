@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence xmlns="http://www.jsxm.org/schema"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/output.xsd">
+
+    <call>
+        <input name="startCall" />
+        <output name="startCallOut" />
+    </call>
+
+    <call>
+        <input name="holdCall" />
+        <output name="holdCallOut" />
+    </call>
+
+    <call>
+        <input name="resumeCall" />
+        <output name="resumeCallOut" />
+    </call>
+
+    <call>
+        <input name="endCall" />
+        <output name="endCallOut" />
+    </call>
+    
+    <call>
+        <input name="startCall" />
+        <output name="startCallOut" />
+    </call>
+    
+    <call>
+        <input name="endCall" />
+        <output name="endCallOut" />
+    </call>
+</sequence>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SXM name="Account" 
+	xmlns="http://www.jsxm.org/schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.jsxm.org/schema http://www.jsxm.org/schema/specification.xsd">
+
+	<!--States definition-->
+	<states>
+		<state name="initial"/>
+		<state name="opened"/>
+		<state name="closed"/>
+		<state name="normal"/>
+	</states>
+
+	<!--Initial State definition-->
+	<initialState state="initial"/>
+
+	<!--Transitions definition-->
+	<transitions>
+		<transition from="initial" function="open" to="opened"/>
+		<transition from="opened" function="close" to="closed"/>
+		<transition from="opened" function="deposit" to="normal"/>
+		<transition from="normal" function="deposit" to="normal"/>
+		<transition from="normal" function="withdrawN" to="normal"/>
+		<transition from="normal" function="withdraw0" to="opened"/>
+		<transition from="opened" function="readbalance" to="opened"/>
+		<transition from="normal" function="readbalance" to="normal"/>
+	</transitions>
+
+	<!--Memory definition-->
+	<memory>
+		<declaration> int balance </declaration>
+		<initial> balance = 0 </initial>
+		<display> balance </display>
+	</memory>
+	
+	<!--Inputs definition-->
+	<inputs>
+		<input name="open"/>
+		<input name="close"/>
+		<input name="getBalance"/>
+		<input name="deposit">
+			<arg name="amount" type="xs:int"/>
+		</input>
+		<input name="withdraw">
+			<arg name="amount" type="xs:int"/>
+		</input>
+	</inputs>
+
+	<!--Outputs definition-->
+	<outputs>
+		<output name="openOut"/>
+		<output name="closeOut"/>
+		<output name="depositOut">
+			<result name="amount" type="xs:int"/>
+		</output>
+		<output name="withdrawOut">
+			<result name="amount" type="xs:int"/>
+		</output>
+		<output name="getBalanceOut">
+			<result name="amount" type="xs:int"/>
+		</output>
+	</outputs>
+
+	<!--Functions definition-->
+	<functions>
+		<function name="open" input="open" output="openOut" xsi:type="OutputFunction"/>
+		<function name="close" input="close" output="closeOut" xsi:type="OutputFunction"/>
+		<function name="deposit" input="deposit" output="depositOut" xsi:type="OutputFunction">
+			<precondition> deposit.get_amount() > 0 </precondition>
+			<effect> balance = balance + deposit.get_amount(); depositOut.amount =
+				deposit.get_amount(); </effect>
+		</function>
+		<function name="withdrawN" input="withdraw" output="withdrawOut" xsi:type="OutputFunction">
+			<precondition> withdraw.get_amount() > 0 &amp;&amp; balance > withdraw.get_amount() </precondition>
+			<effect> balance = balance - withdraw.get_amount(); withdrawOut.amount =
+				withdraw.get_amount(); </effect>
+		</function>
+		<function name="withdraw0" input="withdraw" output="withdrawOut" xsi:type="OutputFunction">
+			<precondition> withdraw.get_amount() > 0 &amp;&amp; balance == withdraw.get_amount() </precondition>
+			<effect> balance = balance - withdraw.get_amount(); withdrawOut.amount =
+				withdraw.get_amount(); </effect>
+		</function>
+		<function name="readbalance" input="getBalance" output="getBalanceOut" xsi:type="OutputFunction">
+			<effect> getBalanceOut.amount = balance; </effect>
+		</function>
+	</functions>
+
+	<!--Test Input Generation definition-->
+	<testinputgeneration>
+		<inputgenerator function="deposit"> deposit.set_amount(5); </inputgenerator>
+		<inputgenerator function="withdrawN"> if (balance != 1) withdraw.set_amount(1); </inputgenerator>
+		<inputgenerator function="withdraw0"> withdraw.set_amount(balance); </inputgenerator>
+		<!-- <inputgenerator function="deposit"> setArg(0, "10"); </inputgenerator> 
+			<inputgenerator function="withdrawN"> if (balance != 1) setArg(0, "1"); </inputgenerator> 
+			<inputgenerator function="withdraw0"> setArg(0, ""+balance ); </inputgenerator> -->
+	</testinputgeneration>
+
+</SXM>
